@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>name.yuco.g.time</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>530D084A-3DD2-4AD4-A407-57A44989853D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>01BBEE5C-E983-40A3-B386-63202375ECB2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A29B1848-CE26-4534-B9E5-CBD49C829E63</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>@kminiatures</string>
+	<key>description</key>
+	<string>time by word</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>time</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>01BBEE5C-E983-40A3-B386-63202375ECB2</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>A29B1848-CE26-4534-B9E5-CBD49C829E63</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>58</integer>
+				<key>keyword</key>
+				<string>t</string>
+				<key>runningsubtext</key>
+				<string>wait!!</string>
+				<key>script</key>
+				<string># fileencoding=utf-8
+
+require './time.rb'
+TimeConverter.new.run('{query}')
+
+
+</string>
+				<key>subtext</key>
+				<string>today, tomorrow, next sunday</string>
+				<key>title</key>
+				<string>time</string>
+				<key>type</key>
+				<integer>2</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>530D084A-3DD2-4AD4-A407-57A44989853D</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>`t now` -&gt; 2014/11/11 14:26:17 
+`t tomorrow` -&gt; 11/12 ( Wed )
+`t next sun` -&gt; 2014-11-16
+`t last sun` -&gt; Nov/09/2014 ( Sun )</string>
+	<key>uidata</key>
+	<dict>
+		<key>01BBEE5C-E983-40A3-B386-63202375ECB2</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>530D084A-3DD2-4AD4-A407-57A44989853D</key>
+		<dict>
+			<key>ypos</key>
+			<real>180</real>
+		</dict>
+		<key>A29B1848-CE26-4534-B9E5-CBD49C829E63</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>g.yuco.name</string>
+</dict>
+</plist>
