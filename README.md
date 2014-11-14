@@ -11,4 +11,4 @@ Alfred Workflow
 ![](http://i.gyazo.com/c0b2f13ff239cf1f10cc0795ccd5b6db.gif)
 
 
-Download Workflow http://i.gyazo.com/c0b2f13ff239cf1f10cc0795ccd5b6db.gif
+Download Workflow https://github.com/kminiatures/word-to-time-workflow/raw/master/release/time-1.0.alfredworkflow
