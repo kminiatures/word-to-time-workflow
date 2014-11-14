@@ -8,4 +8,4 @@ word to time alfred workflow
 `t next sun` -> 2014-11-16  
 `t last sun` -> Nov/09/2014 ( Sun )  
 
-![](http://gyazo.com/25b0fc93ad57eebb9852adef1b6f2e58.png)
+![](http://i.gyazo.com/c0b2f13ff239cf1f10cc0795ccd5b6db.gif)
