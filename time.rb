@@ -42,7 +42,7 @@ class TimeConverter
     [
       "#{YMD} #{HMS}",
       "#{YMD} #{DOW} #{HMS}",
-      "#{YMDh}-%H-%M-%S",
+      "#{YMDh} %H:%M:%S",
       "%Y%m%d%H%M%S",
       "#{YMDj}#{HMSj}",
       '_unix_time_stamp_',
@@ -80,9 +80,9 @@ class TimeConverter
     when "now", "n"
       date_and_time_format + time_format + date_format
     when "date", "d"
-      date_format
+      date_format + date_and_time_format
     else
-      date_format
+      date_format + date_and_time_format
     end
   end
 end
@@ -164,7 +164,7 @@ class TimeConverter
     when /来週の?#{@day_of_week_options}曜?日?/, /next week #{@day_of_week_options_en}/
       (now + Time::WEEK).beginning_of_week + find_day_of_week($1) * Time::DAY
     when /先月の#{regex_day}日?/, /last month #{regex_day}/
-      prev_month = now.month == 12 ? 1 : now.month - 1
+      prev_month = now.month == 1 ? 12 : now.month - 1
       month_and_day(now, prev_month, $1)
     when /来月の#{regex_day}日?/, /next month #{regex_day}/
       next_month =  now.month == 1 ? 12 : now.month + 1
